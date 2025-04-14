@@ -16,10 +16,10 @@ let nextProjectId = 7;
 let editingProjectId = null;
 let currentProjectIdToDelete = null;
 let currentId = JSON.parse(localStorage.getItem("currentUser")).id;
-function escapeSingleQuotes(str) {
-  if (!str) return "";
-  return str.replace(/'/g, "\\'");
-}
+// function escapeSingleQuotes(str) {
+//   if (!str) return "";
+//   return str.replace(/'/g, "\\'");
+// }
 
 function saveProjectsToLocalStorage() {
   localStorage.setItem("projects", JSON.stringify(projects));

@@ -10,11 +10,12 @@ function out() {
     cancelButtonText: "Hủy",
   }).then((result) => {
     if (result.isConfirmed) {
-      // Xóa thông tin phiên người dùng/token nếu có
-      // localStorage.removeItem('userToken');
       window.location.href = "login1.html"; // Chuyển hướng đến trang đăng nhập
     }
   });
+}
+function switchpageMision() {
+  window.location = "task_manager.html";
 }
 document.addEventListener("DOMContentLoaded", () => {
   try {
