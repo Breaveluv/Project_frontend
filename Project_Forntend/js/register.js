@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
         title: "Mật khẩu không khớp!",
         text: "Mật khẩu xác nhận phải trùng với mật khẩu.",
         icon: "error",
-        confirmButtonText: "Thử lại", // Sửa thành confirmButtonText
+        confirmButtonText: "Thử lại", 
       });
       return;
     }
@@ -71,24 +71,24 @@ document.addEventListener("DOMContentLoaded", () => {
     const existingUser = users.find((user) => user.email === email);
     if (existingUser) {
       Swal.fire({
-        // Sửa thành Swal.fire
+        
         title: "Email đã tồn tại!",
         text: "Vui lòng sử dụng email khác.",
         icon: "error",
-        confirmButtonText: "Thử lại", // Sửa thành confirmButtonText
+        confirmButtonText: "Thử lại", 
       });
       return;
     }
 
     const newUser = {
-      id: users.length == 0 ? 1 : users[length].id + 1, // Nên thêm ID duy nhất
+      id: users.length == 0 ? 1 : users[length].id + 1, 
       name: name,
       email: email,
-      password: password, // Cảnh báo: Không lưu mật khẩu dạng text rõ!
+      password: password, 
     };
 
     Swal.fire({
-      // Sửa thành Swal.fire
+      
       title: "Đăng ký thành công!",
       text: "Tài khoản của bạn đã được tạo. Chuyển hướng đến trang đăng nhập.",
       icon: "success",

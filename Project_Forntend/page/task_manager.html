@@ -163,61 +163,6 @@
     <!-- Updated Footer Text -->
     <footer>© 2025 Quản Lý Dự Án Nhóm by Vu Hoai Nam.</footer>
 
-    <script>
-      // --- Keep your existing functions ---
-      function switchpage() {
-        // Assuming category_manager.html is in the same directory or adjust path
-        window.location.href = "./category_manager.html"; // Make sure this path is correct
-      }
-      function out() {
-        Swal.fire({
-          title: "Bạn chắc chắn muốn đăng xuất?",
-          icon: "warning",
-          showCancelButton: true,
-          confirmButtonColor: "#3085d6",
-          cancelButtonColor: "#d33",
-          confirmButtonText: "Đăng xuất",
-          cancelButtonText: "Hủy",
-        }).then((result) => {
-          if (result.isConfirmed) {
-            // Assuming login1.html is in the same directory or adjust path
-            window.location.href = "login1.html"; // Make sure this path is correct
-          }
-        });
-      }
-      // Optional: Add goHome function if needed
-      // function goHome() {
-      //     window.location.href = "index.html"; // Or your home page
-      // }
-
-      // --- Add JavaScript for Expand/Collapse ---
-      document.addEventListener("DOMContentLoaded", () => {
-        const categoryRows = document.querySelectorAll(
-          ".task-table tbody tr.task-category"
-        );
-
-        categoryRows.forEach((headerRow) => {
-          // Set initial state based on 'collapsed' class
-          const group = headerRow.dataset.group;
-          const items = document.querySelectorAll(
-            `.task-table tbody tr.task-item.${group}`
-          );
-          if (headerRow.classList.contains("collapsed")) {
-            items.forEach((item) => item.classList.add("hidden"));
-          }
-
-          // Add click listener
-          headerRow.addEventListener("click", () => {
-            // Toggle collapsed class on the header row
-            headerRow.classList.toggle("collapsed");
-
-            // Toggle 'hidden' class on the associated item rows
-            items.forEach((item) => {
-              item.classList.toggle("hidden");
-            });
-          });
-        });
-      });
-    </script>
+    <script src="../js/task_manager.js"></script>
   </body>
 </html>
